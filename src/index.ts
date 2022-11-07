@@ -9,8 +9,7 @@ import {
   sendResult,
 } from 'graphql-helix';
 import { schema } from './schema';
-import { REPL_MODE_SLOPPY } from 'repl';
-import { responsePathAsArray } from 'graphql';
+import { contextFactory } from './context';
 
 const server = fastify();
 const PORT = 5500;
@@ -42,6 +41,7 @@ server.route({
       request,
       schema,
       operationName,
+      contextFactory,
       query,
       variables,
     });

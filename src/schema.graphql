@@ -60,6 +60,6 @@ type Shelter {
 
 type Query {
   allPets: [Pet!]!
-  searchByLocation(location: String!): [Pet]!
+  petsByLocation(location: String!): [Pet]
 }
 
