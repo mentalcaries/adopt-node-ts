@@ -17,35 +17,6 @@ type Pet = {
   vaccinated?: boolean;
 };
 
-let pets: Pet[] = [
-  {
-    id: 1,
-    name: 'Ruff',
-    age: 1,
-    type: 'dog',
-    gender: 'male',
-    location: 'Penal, Trinidad',
-    breed: 'ratter',
-    shelter: 'Animal House',
-    photo:
-      'https://www.akc.org/wp-content/uploads/2017/04/Lagotto-Romangolo-Tongue-Out.jpg',
-    vaccinated: true,
-    neutered: false,
-  },
-  {
-    id: 2,
-    name: 'Marco',
-    age: 1,
-    type: 'dog',
-    gender: 'female',
-    location: 'Penal, Trinidad',
-    breed: 'German Sheppy',
-    shelter: 'Animal House',
-    photo:
-      'http://cdn.akc.org/content/article-body-image/keeshond_dog_pictures.jpg',
-  },
-];
-
 const resolvers = {
   Query: {
     allPets: async (parent: unknown, args: {}, context: GraphQLContext) => {
